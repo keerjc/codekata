@@ -11,6 +11,6 @@ public class DigCount
   System.out.println("Enter a value");
   int no=s.nextInt();
   int count=Integer.toString(no).length();
-  System.out.println("The sum of n values is " + count);
+  System.out.println("The no. of digits is " + count);
  }
 }
