@@ -1,7 +1,7 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-public class PrimeCount
+public class Prime
 {
  public static void main(String[] args)
  {
@@ -12,8 +12,8 @@ public class PrimeCount
   int input1=s.nextInt();
   System.out.println("\nEnter an end no.");
   int input2=s.nextInt();
-  if(input1==0||input1==1||input1==2)
-   start=3;
+  if(input1==0||input1==1)
+   start=2;
   else
    start=input1;
   System.out.println("\nThe prime nos between "+input1+" and "+input2+" are ");
