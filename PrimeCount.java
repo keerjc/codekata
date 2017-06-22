@@ -12,7 +12,7 @@ public class Prime
   int input1=s.nextInt();
   System.out.println("\nEnter an end no.");
   int input2=s.nextInt();
-  if(input1==0||input1==1)
+  if(input1<=0||input1==1)
    start=2;
   else
    start=input1;
