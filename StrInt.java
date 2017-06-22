@@ -7,7 +7,7 @@ public class StrInt
  {
   System.out.println("  *STRING TO INT*");
   Scanner s=new Scanner(System.in);
-  System.out.println("\nEnter a string");
+  System.out.println("\nEnter a no. (but stored as string)");
   String input=s.nextLine();
   int convert=Integer.parseInt(input);
   System.out.println("\nThe string "+input+ " is converted to "+convert);
