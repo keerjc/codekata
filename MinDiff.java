@@ -19,12 +19,20 @@ public class MinDiff
   while (st1.hasMoreTokens())
   {
    for(i=0;i<3;i++)
-    time1[i]=st1.nextToken();
-  }
+          time1[i]=st1.nextToken();
+        }
   while (st2.hasMoreTokens())
   {
    for(i=0;i<3;i++)
     time2[i]=st2.nextToken();
+  }
+  time1[2]=time1[2].toLowerCase();
+  time2[2]=time2[2].toLowerCase();
+  if(!(time1[2].equals("am")||time1[2].equals("pm")||
+     time2[2].equals("am")||time2[2].equals("pm")))
+  {
+   System.out.println("\nPlease enter the input as per the format");
+   System.exit(0);
   }
   int tim1=Integer.parseInt(time1[0]);
   int tim2=Integer.parseInt(time2[0]);
