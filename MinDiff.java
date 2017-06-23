@@ -38,6 +38,12 @@ public class MinDiff
   int tim2=Integer.parseInt(time2[0]);
   int tim1a=Integer.parseInt(time1[1]);
   int tim2a=Integer.parseInt(time2[1]);
+  if(!(tim1>0&&tim1<=12&&tim1a>=0&&tim1a<60&&
+       tim2>0&&tim2<=12&&tim2a>=0&&tim2a<60))
+  {
+   System.out.println("\nPlease enter the input as per the format");
+   System.exit(0);
+  }
   if(time1[2].equals(time2[2]))
   {
    min1=(tim1*60)+tim1a;
