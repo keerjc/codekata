@@ -5,7 +5,7 @@ public class MinDiff
 {
  public static void main(String[] args)
  {
-  int i, min=0,min1=0,min2=0;
+  int i, min=0,min1=0,min2=0,a=0;
   String time1[]=new String[3];
   String time2[]=new String[3];
   System.out.println("  *MINUTES BETWEEN TWO TIMES*");
@@ -53,10 +53,34 @@ public class MinDiff
   }
   else
   {
-   min1=(tim1*60)+tim1a+(12*60);
-   min2=(tim2*60)+tim2a;
-   min=min1-min2;
-   min=Math.abs(min);
+   if(tim1a>0)
+   {
+    tim1a=60-tim1a;
+    tim1=tim1+1;
+   }
+   if(tim1==tim2)
+   {
+    min=tim1a+tim2a+720;
+    min=Math.abs(min);
+   }
+   else
+   {
+    int tt=tim1-tim2;
+    if(tt<0)
+    {
+     tt=Math.abs(tt);
+     a=12+tt;
+    }
+    else
+    {
+     tt=Math.abs(tt);
+     a=12-tt;
+    }
+    min=tim1a+tim2a+(a*60);
+    min=Math.abs(min);
+    if(time1[2].equals("pm")&&min<360)
+     min=min+720;
+   }
   }
   System.out.println("\nThe minutes between "+input1+" and "+input2+" is "+min);
  }
