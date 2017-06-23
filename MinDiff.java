@@ -41,7 +41,7 @@ public class MinDiff
   if(!(tim1>0&&tim1<=12&&tim1a>=0&&tim1a<60&&
        tim2>0&&tim2<=12&&tim2a>=0&&tim2a<60))
   {
-   System.out.println("\nPlease enter the input as per the format");
+   System.out.println("\nPlease enter the time in normal format (not as railway format)");
    System.exit(0);
   }
   if(time1[2].equals(time2[2]))
