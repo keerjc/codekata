@@ -1,0 +1,49 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+public class MinDiff
+{
+ public static void main(String[] args)
+ {
+  int i, min=0,min1=0,min2=0;
+  String time1[]=new String[3];
+  String time2[]=new String[3];
+  System.out.println("  *MINUTES BETWEEN TWO TIMES*");
+  Scanner s=new Scanner(System.in);
+  System.out.println("\nEnter the start time (hh:mm:am/pm)");
+  String input1=s.nextLine();
+  System.out.println("\nEnter the end time (hh:mm:am/pm)");
+  String input2=s.nextLine();
+  StringTokenizer st1 = new StringTokenizer(input1,":");
+  StringTokenizer st2 = new StringTokenizer(input2,":");
+  while (st1.hasMoreTokens())
+  {
+   for(i=0;i<3;i++)
+    time1[i]=st1.nextToken();
+  }
+  while (st2.hasMoreTokens())
+  {
+   for(i=0;i<3;i++)
+    time2[i]=st2.nextToken();
+  }
+  int tim1=Integer.parseInt(time1[0]);
+  int tim2=Integer.parseInt(time2[0]);
+  int tim1a=Integer.parseInt(time1[1]);
+  int tim2a=Integer.parseInt(time2[1]);
+  if(time1[2].equals(time2[2]))
+  {
+   min1=(tim1*60)+tim1a;
+   min2=(tim2*60)+tim2a;
+   min=min1-min2;
+   min=Math.abs(min);
+  }
+  else
+  {
+   min1=(tim1*60)+tim1a+(12*60);
+   min2=(tim2*60)+tim2a;
+   min=min1-min2;
+   min=Math.abs(min);
+  }
+  System.out.println("\nThe minutes between "+input1+" and "+input2+" is "+min);
+ }
+}
