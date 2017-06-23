@@ -31,7 +31,7 @@ public class MinDiff
   if(!(time1[2].equals("am")||time1[2].equals("pm")||
      time2[2].equals("am")||time2[2].equals("pm")))
   {
-   System.out.println("\nPlease enter the input as per the format");
+   System.out.println("\nPlease specify the am and pm correctly");
    System.exit(0);
   }
   int tim1=Integer.parseInt(time1[0]);
